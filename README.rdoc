@@ -5,7 +5,16 @@ Bare bones rails app with the following gems:
     gem 'bson_ext',                      '1.6.2'
     gem 'money-rails',                   '0.4.0'
 
-== Fails in concole
+=== Create a model
+
+    class Transaction
+      include Mongoid::Document
+      include Mongoid::Timestamps
+      
+      field :amount, type: Money
+    end
+
+=== Fails in concole
 
     ♫  ~/code/rm-test$ rails c
     Loading development environment (Rails 3.2.6)
